@@ -12,7 +12,6 @@ import Foundation
 
 var restuarantRatings : [Double] = []
 
-
 /*:
  2. Now populate the array with twenty random ratings between 1 and 100.
  */
@@ -22,14 +21,11 @@ for _ in 1...20 {
 /*:
  3. Determine the average rating. Remember, calculate an average by finding the sum of all the values, then dividing by the number of values.
  */
-    var runningTotal = 0.0
-    for rating in restuarantRatings {
-        runningTotal += rating
+    var totalRating = 0.0
+    for rating in restaurantRatings {
+        totalRating += rating
     }
-    // b. Now take the running total and divide it by the number of values in the array
-    let averageRating = runningTotal / Double(restuarantRatings.count)
-
-    let averageRating = runningTotal / Double(restuarantRatings.count)
+    totalRating /= Double(restaurantRatings.count)
 /*:
  4. The restaurant is most concerned with how many diners considered their meal to be less than satisfactory. Calculate the percentage of diners who gave the restaurant a rating less than 80.
  */
@@ -68,13 +64,7 @@ for _ in 1...20 {
 
 let report = 90
 // Restaurant Report
-    //=================
-This many people thought the restaurent was STELLAR     : \(stellarCount)
-This many people thought the restaurent was SATISFACTORY: \(satisfactoryCount)
-This many people thought the restaurent was FAIR        : \(fairCount)
-This many people thought the restaurent was BAD         : \(badCount)
-This many people thought the restaurent was VERY BAD    : \(veryBadCount)
 
-print(report)
+print("This many people thought the restaurent was STELLAR     : \(stellarCount) This many people thought the restaurent was SATISFACTORY: \(satisfactoryCount) This many people thought the restaurent was FAIR        : \(fairCount) This many people thought the restaurent was BAD         : \(badCount) This many people thought the restaurent was VERY BAD    : \(veryBadCount)")
 
 
